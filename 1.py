@@ -1,23 +1,23 @@
 
 import math
 
-def calculate_rectangle_area(length, width):
+def rectangle_area(length, width):
     """Обчислює площу прямокутника."""
     return length * width
 
-def calculate_circle_area(radius):
+def circle_area(radius):
     """Обчислює площу кола."""
     return math.pi * radius ** 2
 
-def calculate_triangle_area(base, height):
+def triangle_area(base, height):
     """Обчислює площу трикутника."""
     return 0.5 * base * height
 
-def calculate_square_area(side):
+def square_area(side):
     """Обчислює площу квадрата."""
     return side ** 2
 
-def calculate_parallelogram_area(base, height):
+def parallelogram_area(base, height):
     """Обчислює площу паралелограма."""
     return base * height
 
@@ -33,27 +33,27 @@ choice = int(input("Введіть номер вибраної фігури: "))
 
 # Введення даних
 if choice == 1:
-    length_rect = float(input("Введіть довжину прямокутника: "))
-    width_rect = float(input("Введіть ширину прямокутника: "))
-    area = calculate_rectangle_area(length_rect, width_rect)
+    length = float(input("Введіть довжину прямокутника: "))
+    width = float(input("Введіть ширину прямокутника: "))
+    area = rectangle_area(length, width)
 
 elif choice == 2:
-    radius_circle = float(input("Введіть радіус кола: "))
-    area = calculate_circle_area(radius_circle)
+    radius = float(input("Введіть радіус кола: "))
+    area = circle_area(radius)
 
 elif choice == 3:
-    base_triangle = float(input("Введіть основу трикутника: "))
-    height_triangle = float(input("Введіть висоту трикутника: "))
-    area = calculate_triangle_area(base_triangle, height_triangle)
+    base1 = float(input("Введіть основу трикутника: "))
+    height1 = float(input("Введіть висоту трикутника: "))
+    area = triangle_area(base1, height)
 
 elif choice == 4:
-    side_square = float(input("Введіть сторону квадрата: "))
-    area = calculate_square_area(side_square)
+    side = float(input("Введіть сторону квадрата: "))
+    area = square_area(side)
 
 elif choice == 5:
-    base_parallelogram = float(input("Введіть основу паралелограма: "))
-    height_parallelogram = float(input("Введіть висоту паралелограма: "))
-    area = calculate_parallelogram_area(base_parallelogram, height_parallelogram)
+    base2 = float(input("Введіть основу паралелограма: "))
+    height2 = float(input("Введіть висоту паралелограма: "))
+    area = parallelogram_area(base2, height2)
 
 else:
     print("Невірний вибір фігури.")
