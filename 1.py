@@ -11,7 +11,7 @@ def circle_area(radius):
 
 def triangle_area(base, height):
     """Обчислює площу трикутника."""
-    return 0.5 * base * height
+    return 0.5 * base1 * height1
 
 def square_area(side):
     """Обчислює площу квадрата."""
@@ -19,7 +19,7 @@ def square_area(side):
 
 def parallelogram_area(base, height):
     """Обчислює площу паралелограма."""
-    return base * height
+    return base2 * height2
 
 # Вибір фігури 
 print("Виберіть фігуру:")
@@ -44,7 +44,7 @@ elif choice == 2:
 elif choice == 3:
     base1 = float(input("Введіть основу трикутника: "))
     height1 = float(input("Введіть висоту трикутника: "))
-    area = triangle_area(base1, height)
+    area = triangle_area(base1, height1)
 
 elif choice == 4:
     side = float(input("Введіть сторону квадрата: "))
