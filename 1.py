@@ -1,4 +1,3 @@
-
 import math
 
 def rectangle_area(length, width):
@@ -22,43 +21,51 @@ def parallelogram_area(base, height):
     return base2 * height2
 
 # Вибір фігури 
-print("Виберіть фігуру:")
-print("1. Прямокутник")
-print("2. Коло")
-print("3. Трикутник")
-print("4. Квадрат")
-print("5. Паралелограм")
+while True:
+    # Вибір фігури
+    print("0. Вихід")
+    print("Виберіть фігуру:")
+    print("1. Прямокутник")
+    print("2. Коло")
+    print("3. Трикутник")
+    print("4. Квадрат")
+    print("5. Паралелограм")
+    
 
-choice = int(input("Введіть номер вибраної фігури: "))
+    choice = int(input("Введіть номер вибраної фігури (або 0 для виходу): "))
 
-# Введення даних
-if choice == 1:
-    length = float(input("Введіть довжину прямокутника: "))
-    width = float(input("Введіть ширину прямокутника: "))
-    area = rectangle_area(length, width)
+    if choice == 0:
+        break  # Вихід з циклу при виборі 0
 
-elif choice == 2:
-    radius = float(input("Введіть радіус кола: "))
-    area = circle_area(radius)
+    # Введення даних
+    if choice == 1:
+        length = float(input("Введіть довжину прямокутника: "))
+        width = float(input("Введіть ширину прямокутника: "))
+        area = rectangle_area(length, width)
 
-elif choice == 3:
-    base1 = float(input("Введіть основу трикутника: "))
-    height1 = float(input("Введіть висоту трикутника: "))
-    area = triangle_area(base1, height1)
+    elif choice == 2:
+        radius = float(input("Введіть радіус кола: "))
+        area = circle_area(radius)
 
-elif choice == 4:
-    side = float(input("Введіть сторону квадрата: "))
-    area = square_area(side)
+    elif choice == 3:
+        base = float(input("Введіть основу трикутника: "))
+        height = float(input("Введіть висоту трикутника: "))
+        area = triangle_area(base, height)
 
-elif choice == 5:
-    base2 = float(input("Введіть основу паралелограма: "))
-    height2 = float(input("Введіть висоту паралелограма: "))
-    area = parallelogram_area(base2, height2)
+    elif choice == 4:
+        side = float(input("Введіть сторону квадрата: "))
+        area = square_area(side)
 
-else:
-    print("Невірний вибір фігури.")
-    area = None
+    elif choice == 5:
+        base = float(input("Введіть основу паралелограма: "))
+        height = float(input("Введіть висоту паралелограма: "))
+        area = parallelogram_area(base, height)
 
-# Виведення даних
-if area is not None:
-    print(f"Площа обраної фігури: {area}")
+    else:
+        print("Невірний вибір фігури.")
+        area = None
+
+    # Виведення даних
+    if area is not None:
+        coma = int(input("Введіть кількість знаків після коми: "))
+        print(f"Площа обраної фігури: {area:.{coma}f}")
